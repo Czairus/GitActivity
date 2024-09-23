@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* background-color: #f0f0f0; */ /* Removed background color */
+        }
+        .poster {
+            position: relative;
+            width: 40%;  /* Adjusted width for portrait format */
+            height: 80%; /* Portrait height */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-image: url('https://ih1.redbubble.net/image.1335620999.7852/flat,750x,075,f-pad,750x1000,f8f8f8.jpg');
+            background-size: contain; /* Ensures the whole image fits */
+            background-position: center center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents image repetition */
+            text-align: center;
+            color: white;
+        }
+        /* Add an overlay to darken the background image */
+        .poster::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+            border-radius: 0px;
+            z-index: 1;
+        }
+        .poster h1, .poster p {
+            position: relative;
+            z-index: 2; /* Ensures text is above the overlay */
+        }
+        .poster h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        .poster p {
+            font-size: 1.2em;
+            color: #f0f0f0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <h1>Inspirational Poster</h1>
+        <p>Believe in yourself, and anything is possible.</p>
+    </div>
+</body>
+</html>
